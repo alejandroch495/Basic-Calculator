@@ -11,7 +11,7 @@ class Calculator {
 
     }
     delete() {
-
+        this.currentOperand = this.currentOperand.slice(0,-1);
     }
     appendNum(number) {
         if(number==='.' && this.currentOperand.includes('.')){
@@ -56,4 +56,9 @@ numButtons.forEach(button => {
         calculator.appendNum(button.innerText);
         calculator.updateDisplay();
     })
+})
+
+delButton.addEventListener('click', ()=>{
+    calculator.delete();
+    calculator.updateDisplay();
 })

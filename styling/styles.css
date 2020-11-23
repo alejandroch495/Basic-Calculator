@@ -1,0 +1,140 @@
+body {
+    display: grid;
+    grid-template: 1fr/1fr;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #0e0e0e;
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    grid-template: 1fr 4fr / auto;
+    border-radius: 30px;
+    display: grid;
+    margin: 0;
+    padding: 5px;
+    width: 600px;
+    height: 800px;
+    background: #111111;
+    box-shadow: 1px 1px 15px black;
+}
+
+#screen {
+    text-align: center;
+    padding: 15px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    display: grid;
+    grid-template: auto 1fr/ auto;
+    grid-column: auto;
+    background: rgb(31, 31, 31);
+    font-size: 3em;
+    color: #ffffff9f;
+    text-shadow: 2px 2px 1px #313131;
+}
+
+#innerscreen {
+    text-align: center;
+    height: 108px;
+    padding: 15px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    display: grid;
+    grid-template: auto 1fr/ auto;
+    grid-column: auto;
+    background: rgb(8, 8, 8);
+    color: #ffffff9f;
+    text-shadow: 2px 2px 1px #313131;
+}
+
+#buttons {
+    display: grid;
+    place-items: center;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / auto auto auto auto;
+    padding: 10px;
+    background: rgb(32, 32, 32);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#trcrnr {
+    border-top-right-radius: 20px;
+}
+
+#tlcrnr {
+    border-top-left-radius: 20px;
+    grid-column: 1 / 3;
+}
+
+#blcrnr {
+    border-bottom-left-radius: 20px;
+}
+
+#brcrnr {
+    border-bottom-right-radius: 20px;
+}
+
+button {
+    border: none;
+    background: #333333;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 5px;
+    box-shadow: 1px 1px 4px black;
+    user-select: none;
+    color: #e7e7e7b9;
+    font-size: 2em;
+    text-shadow: 0 0 5px #000000;
+}
+
+#button {
+    border: none;
+    background: #333333;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 5px;
+    box-shadow: 1px 1px 4px black;
+    user-select: none;
+}
+
+#output {
+    padding: 2%;
+    border-style: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    grid-column: auto;
+    background: rgb(54, 54, 54);
+}
+
+#input {
+    border-style: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    grid-column: auto;
+    background: rgb(54, 54, 54);
+}
+
+#span2 {
+    grid-column: 1 / 4;
+    column-span: 2;
+}
+
+button:hover {
+    background: rgb(43, 43, 43);
+}
+
+#button:hover {
+    background: rgb(43, 43, 43);
+}
+
+button:active {
+    background: rgb(20, 20, 20);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <link rel="stylesheet" href="styling/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="screen">
+            <div id="innerscreen">
+                <div class="" data-previous>
+                    top section/ input tracker
+                </div>
+                <div placeholder="UserInput" type="text" data-current></div>
+            </div>
+        </div>
+        <label id="buttons"><button style="display: none; width: 0px;height: 0px;" >1</button>
+             
+             <button data-ac onclick="Button2()" id="tlcrnr">AC</button>
+             <button data-delete onclick="Button2()">DEL</button>
+             <button data-numbers onclick="Button2()"id="trcrnr">/</button>
+            <button class="button" data-numbers onclick="Button1()">1</button>
+            <button data-numbers >2</button>
+            <button data-numbers >3</button>
+            <button data-operators onclick="ButtonDash()" >-</button>
+            <button data-numbers onclick="Button4()">4</button>
+            <button data-numbers onclick="Button5()">5</button>
+            <button data-numbers onclick="Button6()">6</button>
+            <button data-operators onclick="Button1Plus()">+</button>
+            <button data-numbers onclick="Button7()">7</button>
+            <button data-numbers onclick="Button8()">8</button>
+            <button data-numbers onclick="Button9()">9</button>
+            <button data-operators onclick="ButtonMult()">*</button>
+            <button data- onclick="ButtonInv()" id="blcrnr">+/-</button>
+            <button data-numbers onclick="Button0()">0</button>
+            <button data-numbers onclick="ButtonDot()">.</button>
+            <button data-equal onclick="ButtonEqual()" id="brcrnr">=</button>
+        </label>
+    </div>
+    <script src="scripts/script.js" defer></script>
+</body>
+
+</html>

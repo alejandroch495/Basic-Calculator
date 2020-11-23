@@ -27,9 +27,10 @@ body {
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
     display: grid;
-    grid-template: 1fr 3fr/ auto;
+    grid-template: auto 1fr/ auto;
     grid-column: auto;
     background: rgb(32, 32, 32);
+    font-size: 3em;
 }
 
 #buttons {

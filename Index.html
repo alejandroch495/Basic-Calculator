@@ -5,34 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
-    <script src="scripts/script.js"></script>
+
     <link rel="stylesheet" href="styling/styles.css">
 </head>
 
 <body>
     <div id="container">
-        container
         <div id="screen">
-            <div class="" id="output">
-
+            <div class="" data-previous>
+                top section/ input tracker
             </div>
-            <input type="text" onkeypress="keyCode(event)" id="input">
+            <div placeholder="UserInput" type="text" data-current></div>
         </div>
-        <label id="buttons">
-            <span class="button">1</span>
-            <span class="button">2</span>
-            <span class="button">3</span>
-            <span class="button">4</span>
-            <span class="button">5</span>
-            <span class="button">6</span>
-            <span class="button">7</span>
-            <span class="button">8</span>
-            <span class="button">9</span>
-            <span class="button">+/-</span>
-            <span class="button">0</span>
-            <span class="button">.</span>
+        <label id="buttons"><button style="display: none; width: 0px;height: 0px;" >1</button>
+             
+             <button data-ac onclick="Button2()" id="tlcrnr">AC</button>
+             <button data-delete onclick="Button2()">DEL</button>
+             <button data-numbers onclick="Button2()"id="trcrnr">/</button>
+            <button class="button" data-numbers onclick="Button1()">1</button>
+            <button data-numbers >2</button>
+            <button data-numbers >3</button>
+            <button data-operators onclick="ButtonDash()" >-</button>
+            <button data-numbers onclick="Button4()">4</button>
+            <button data-numbers onclick="Button5()">5</button>
+            <button data-numbers onclick="Button6()">6</button>
+            <button data-operators onclick="Button1Plus()">+</button>
+            <button data-numbers onclick="Button7()">7</button>
+            <button data-numbers onclick="Button8()">8</button>
+            <button data-numbers onclick="Button9()">9</button>
+            <button data-operators onclick="ButtonMult()">*</button>
+            <button data- onclick="ButtonInv()" id="blcrnr">+/-</button>
+            <button data-numbers onclick="Button0()">0</button>
+            <button data-numbers onclick="ButtonDot()">.</button>
+            <button data-equal onclick="ButtonEqual()" id="brcrnr">=</button>
         </label>
     </div>
+    <script src="scripts/script.js" defer></script>
 </body>
 
 </html>

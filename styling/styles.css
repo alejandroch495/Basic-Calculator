@@ -29,7 +29,7 @@ body {
     display: grid;
     grid-template: auto 1fr/ auto;
     grid-column: auto;
-    background: rgb(31, 31, 31);
+    background: rgb(32, 32, 32);
     font-size: 3em;
     color: #ffffff9f;
     text-shadow: 2px 2px 1px #313131;
@@ -39,8 +39,7 @@ body {
     text-align: center;
     height: 108px;
     padding: 15px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+    border-radius: 25px;
     display: grid;
     grid-template: auto 1fr/ auto;
     grid-column: auto;

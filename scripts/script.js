@@ -7,6 +7,8 @@ const previous = document.querySelector('[data-previous]');
 const current = document.querySelector('[data-current]');
 const negPos = document.querySelector('[data-negPos]');
 
+let usedEqual = false;
+
 class Calculator {
     constructor(previous, current) {
         this.previous = previous;
@@ -25,6 +27,11 @@ class Calculator {
     appendNum(number) {
         if(number==='.' && this.currentOperand.includes('.')){
             return
+        }
+        if(usedEqual){
+            this.currentOperand = number.toString();
+            usedEqual = false;
+            return;
         }
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
@@ -111,6 +118,7 @@ opsButtons.forEach(button => {
 
 equalButton.addEventListener('click', ()=>{
     calculator.calc();
+    usedEqual = true;
     calculator.updateDisplay();
 })
 

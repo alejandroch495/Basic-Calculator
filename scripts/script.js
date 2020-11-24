@@ -5,6 +5,7 @@ const delButton = document.querySelector('[data-delete]');
 const acButton = document.querySelector('[data-ac');
 const previous = document.querySelector('[data-previous]');
 const current = document.querySelector('[data-current]');
+const negPos = document.querySelector('[data-negPos]');
 
 class Calculator {
     constructor(previous, current) {
@@ -12,11 +13,11 @@ class Calculator {
         this.current = current;
         this.clear();
     }
+
     clear() {
         this.currentOperand = "";
         this.previousOperand = "";
         this.operation = undefined;
-
     }
     delete() {
         this.currentOperand = this.currentOperand.slice(0,-1);
@@ -27,8 +28,18 @@ class Calculator {
         }
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
+
+    negPos(){
+        if(!this.currentOperand.includes('-')){
+            this.currentOperand = "-" + this.currentOperand;
+            return
+        }
+        this.currentOperand = this.currentOperand.substring(1);
+    }
+
     operationSelected(operation) {
         if(this.currentOperand===""){
+            this.operation = operation;
             return
         }
         if(this.previousOperand !==''){
@@ -68,10 +79,15 @@ class Calculator {
 
     updateDisplay() {
         this.current.innerText = this.currentOperand;
-        this.previous.innerText = this.previousOperand;
+        if(this.operation != undefined){
+            this.previous.innerText = `${this.previousOperand} ${this.operation}`
+        }else{
+            this.previous.innerText = ``;
+        }
     }
 }
 
+//initializes the calculator
 const calculator = new Calculator(previous, current);
 
 numButtons.forEach(button => {
@@ -100,5 +116,10 @@ equalButton.addEventListener('click', ()=>{
 
 acButton.addEventListener('click', ()=>{
     calculator.clear();
+    calculator.updateDisplay();
+})
+
+negPos.addEventListener('click', ()=>{
+    calculator.negPos();
     calculator.updateDisplay();
 })
